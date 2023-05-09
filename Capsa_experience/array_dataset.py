@@ -16,6 +16,8 @@ def dataset(data_path):
         for file in os.listdir(os.path.join(data_path, dir1)):
             image_path= os.path.join(data_path, dir1,  file)
             image= cv2.imread( image_path, cv2.COLOR_BGR2RGB)
+            if image is None:
+                continue
             image=cv2.resize(image, (64, 64))
             image=np.array(image)
             image = image.astype('float32')
