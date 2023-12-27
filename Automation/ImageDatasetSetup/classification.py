@@ -1,3 +1,4 @@
+# Imports
 import shutil
 import glob
 import os
@@ -30,7 +31,7 @@ class setupclass:
                 f"{self.datapath}" + nam + ".jpg",
                 f"{self.datapath}" + str(counter) + ".jpg",
             )
-
+    # create a train, test, and validation  directories for the dataset to be split into
     def directory_creator(self):
         directory = rf"{self.datapath}"
         destinations = ["train/", "validation/", "test/"]
